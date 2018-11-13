@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+
+    int i, j;
+    int  sema[3], mes[3], mat[3][3], ano = 0;
+
+    for(i = 0; i < 3; i++){
+        for(j = 0; j < 3; j++){
+        sema[i] = 0;
+        mes[j] = 0;
+        }
+        }
+    for(i = 0; i < 3; i++){
+        for(j = 0; j < 3; j++){
+            int te = rand() % 10;
+            mat[i][j] = te;
+            printf("%d ", mat[i][j]);
+
+
+    }
+    printf("\n");
+    }
+
+
+
+
+    for(i = 0; i < 3; i++){
+        for(j = 0; j < 3; j++){
+            sema[j] = sema[j] + mat[i][j];
+                mes[i] = mes[i] + mat[i][j];
+                ano =  ano + mat[i][j];
+            }
+        }
+
+        printf("total de vendas no ano :%d", ano);
+        for(j = 0; j < 3; j++){
+
+                printf("Semana %d :%d|",j,  sema[j] );
+            printf("\n");
+
+        }
+        for(j = 0; j < 3; j++){
+                printf("mes %d :%d|",j,  mes[j] );
+                printf("\n");
+        }
+
+    return 0;
+}
