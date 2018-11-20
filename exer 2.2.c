@@ -18,9 +18,18 @@
     }
     while( cod != 0 ){
 
-        printf("Informe um codigo\n 1บ para mostrar o vetor na ordem direta \n 2บ p/ mostrar o vetor na ordem inversa \n 3บ p/ apresentar a media de todos os valores \n 0บ para quebrar o looping. ");
+        printf("Informe um codigo\n 1ยบ para mostrar o vetor na ordem direta \n 2ยบ p/ mostrar o vetor na ordem inversa \n 3ยบ p/ apresentar a media de todos os valores \n 0ยบ para quebrar o looping. ");
         printf("\n");
         scanf("%d", &cod);
+        if( cod >= 4 )
+        {
+            printf("Codigo invalido.");
+            cod = 0;
+        }
+        else if( cod <= -1){
+            printf("Codigo invalido.");
+            cod = 0;
+        }
         switch (cod)
         {
         case 1:
